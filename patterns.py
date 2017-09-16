@@ -2,6 +2,13 @@
 Python wrapper for beautiful terminal spinner library by @sindresorhus.
 
 https://github.com/sindresorhus/cli-spinners
+
+Attributes
+----------
+CURR_DIR : str
+    Current directory path
+Patterns : Enum
+    Patterns for command line spinners
 """
 from __future__ import unicode_literals
 
