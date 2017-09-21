@@ -15,4 +15,4 @@ build: off
 
 test_script:
   - pylint --errors-only --rcfile=.pylintrc --output-format=colorized *.py
-  - nosetests --cover-package=log_symbols --with-coverage --cover-erase  --cover-html --cover-branches --nologcapture
+  - nosetests --cover-package=spinners --with-coverage --cover-erase  --cover-html --cover-branches --nologcapture

@@ -9,7 +9,7 @@ import sys
 import time
 import cursor
 
-from patterns import Patterns
+from spinners import Patterns
 
 CLEAR_LINE = '\033[K'
 
