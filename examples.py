@@ -9,7 +9,7 @@ import sys
 import time
 import cursor
 
-from spinners import Patterns
+from spinners import Spinners
 
 CLEAR_LINE = '\033[K'
 
@@ -38,10 +38,10 @@ def animate(frames, interval, name, iterations=2):
 
 try:
     cursor.hide()
-    for pattern in Patterns:
-        frames = pattern.value['frames']
-        interval = pattern.value['interval']
-        name = pattern.name
+    for spinner in Spinners:
+        frames = spinner.value['frames']
+        interval = spinner.value['interval']
+        name = spinner.name
         animate(frames, interval, name)
 
     print '\n'

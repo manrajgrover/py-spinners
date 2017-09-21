@@ -7,8 +7,8 @@ Attributes
 ----------
 CURR_DIR : str
     Current directory path
-Patterns : Enum
-    Patterns for command line spinners
+Spinners : Enum
+    Spinners for command line spinners
 """
 from __future__ import unicode_literals
 
@@ -25,4 +25,4 @@ Read the spinners from cli-spinner submodule
 with open(os.path.join(CURR_DIR, CLI_SPINNERS_DIR, SPINNER_FILE)) as data:
     spinners = json.load(data)
 
-Patterns = Enum('Patterns', spinners)
+Spinners = Enum('Spinners', spinners)
