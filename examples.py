@@ -38,7 +38,7 @@ def animate(frames, interval, name, iterations=2):
 
 try:
     cursor.hide()
-    for spinner in Spinners:
+    for spinner in Spinners: # pylint: disable=not-an-iterable
         frames = spinner.value['frames']
         interval = spinner.value['interval']
         name = spinner.name
