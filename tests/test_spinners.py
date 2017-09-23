@@ -4,7 +4,7 @@ import re
 import unittest
 
 from enum import Enum
-from spinners import Spinners
+from spinners.spinners import Spinners
 
 
 class TestSpinners(unittest.TestCase):
