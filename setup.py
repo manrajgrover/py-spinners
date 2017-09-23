@@ -1,9 +1,9 @@
 from distutils.core import setup # pylint: disable=no-name-in-module,import-error
 
 setup(
-    name='py-spinners',
-    packages=['py-spinners'],
-    version='0.0.1',
+    name='spinners',
+    packages=['spinners'],
+    version='0.0.2',
     description='Spinners for terminals',
     author='Manraj Singh',
     author_email='manrajsinghgrover@gmail.com',
