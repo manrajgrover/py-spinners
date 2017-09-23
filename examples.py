@@ -10,7 +10,7 @@ import time
 
 try:
     import cursor
-except:
+except ImportError:
     import pip
     pip.main(['install', 'cursor'])
     import cursor
