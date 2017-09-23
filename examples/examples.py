@@ -5,6 +5,9 @@ Attributes
 CLEAR_LINE : str
     To clear the current line
 """
+import os
+os.sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import sys
 import time
 
