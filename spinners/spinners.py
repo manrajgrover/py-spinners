@@ -10,12 +10,12 @@ CURR_DIR : str
 Spinners : Enum
     Spinners for command line spinners
 """
-from __future__ import unicode_literals
+from __future__ import unicode_literals, absolute_import
 
 from enum import Enum
 import json
 import os
-from constants import CLI_SPINNERS_DIR, SPINNER_FILE
+from spinners.constants import CLI_SPINNERS_DIR, SPINNER_FILE
 import logging
 
 logging.basicConfig(
