@@ -7,7 +7,13 @@ CLEAR_LINE : str
 """
 import sys
 import time
-import cursor
+
+try:
+    import cursor
+except:
+    import pip
+    pip.main(['install', 'cursor'])
+    import cursor
 
 from spinners import Spinners
 
