@@ -1,10 +1,20 @@
-from distutils.core import setup # pylint: disable=no-name-in-module,import-error
+from setuptools import setup, find_packages # pylint: disable=no-name-in-module,import-error
+
+def readme():
+    with open('README.md') as f:
+        return f.read()
+
+def dependencies(file):
+    with open(file) as f:
+        return f.read().splitlines()
 
 setup(
     name='spinners',
-    packages=['spinners'],
-    version='0.0.2',
+    packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
+    version='0.0.14',
+    license='MIT',
     description='Spinners for terminals',
+    long_description=readme(),
     author='Manraj Singh',
     author_email='manrajsinghgrover@gmail.com',
     url='https://github.com/ManrajGrover/py-spinners',
@@ -24,5 +34,8 @@ setup(
         'wait',
         'idle',
         'json'
-    ]
+    ],
+    install_requires=dependencies('requirements.txt'),
+    tests_require=dependencies('requirements-dev.txt'),
+    include_package_data=True
 )
