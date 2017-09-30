@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages # pylint: disable=no-name-in-module,import-error
 
 def readme():
@@ -11,7 +12,7 @@ def dependencies(file):
 setup(
     name='spinners',
     packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
-    version='0.0.14',
+    version='0.0.15',
     license='MIT',
     description='Spinners for terminals',
     long_description=readme(),
