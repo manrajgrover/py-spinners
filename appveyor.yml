@@ -1,19 +1,42 @@
-environment:
+init:
+  - ps: echo $env:TOXENV
+  - ps: ls C:\Python*
 
+cache:
+  - '%LOCALAPPDATA%\pip\Cache'
+
+environment:
+  fast_finish: true
   matrix:
-    - PYTHON: "C:\\Python27"
-    - PYTHON: "C:\\Python36"
-      DISTUTILS_USE_SDK: "1"
-    - PYTHON: "C:\\Python36-x64"
+    - TOXENV: 'py27'
+      TOXPYTHON: C:\Python27\python.exe
+      PYTHON_HOME: C:\Python27
+      PYTHON_VERSION: '2.7'
+      PYTHON_ARCH: '32'
+
+    - TOXENV: 'py36'
+      TOXPYTHON: C:\Python36\python.exe
+      PYTHON_HOME: C:\Python36
+      PYTHON_VERSION: '3.6'
+      PYTHON_ARCH: '32'
+
+    - TOXENV: 'lint'
+      TOXPYTHON: C:\Python27\python.exe
+      PYTHON_HOME: C:\Python27
+      PYTHON_VERSION: '2.7'
+      PYTHON_ARCH: '32'
+
+matrix:
+  fast_finish: true
 
 install:
-  - "%PYTHON%\\python.exe -m pip install wheel"
-  - git submodule update --init --recursive
-  - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
+  - 'git submodule update --init --recursive'
+  - '%PYTHON_HOME%\Scripts\pip --version'
+  - '%PYTHON_HOME%\Scripts\pip install tox'
+  - '%PYTHON_HOME%\Scripts\tox --version'
+  - '%PYTHON_HOME%\Scripts\virtualenv --version'
 
 build: off
 
 test_script:
-  - pylint --errors-only --rcfile=.pylintrc --output-format=colorized *.py
-  - nosetests --cover-package=spinners --with-coverage --cover-erase  --cover-html --cover-branches --nologcapture
+  - '%PYTHON_HOME%\Scripts\tox -e %TOXENV%'
