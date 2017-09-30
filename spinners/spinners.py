@@ -31,7 +31,7 @@ CURR_DIR = os.path.join(os.path.dirname(__file__), '..')
 """
 Read the spinners from cli-spinner submodule
 """
-with io.open(os.path.join(CURR_DIR, CLI_SPINNERS_DIR, SPINNER_FILE)) as data:
+with io.open(os.path.join(CURR_DIR, CLI_SPINNERS_DIR, SPINNER_FILE), encoding='utf-8') as data:
     spinners = json.load(data)
 
 Spinners = Enum('Spinners', spinners)
