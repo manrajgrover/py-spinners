@@ -10,7 +10,7 @@
 
 The list of spinners is just a [JSON file](https://github.com/sindresorhus/cli-spinners/blob/dac4fc6571059bb9e9bc204711e9dfe8f72e5c6f/spinners.json).
 
-If you're looking to use them, consider using [halo](https://github.com/ManrajGrover/halo) module for Python, or [ora](github.com/sindresorhus/ora) for node.
+If you're looking to use them, consider using [halo](https://github.com/ManrajGrover/halo) module for Python, or [ora](https://github.com/sindresorhus/ora) for node.
 
 ## Install
 
