@@ -12,7 +12,7 @@ def dependencies(file):
 setup(
     name='spinners',
     packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
-    version='0.0.16',
+    version='0.0.17',
     license='MIT',
     description='Spinners for terminals',
     long_description=readme(),
