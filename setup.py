@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages # pylint: disable=no-name-in-module,import-error
 
-def readme():
-    with open('README.md') as f:
-        return f.read()
-
 def dependencies(file):
     with open(file) as f:
         return f.read().splitlines()
@@ -12,10 +8,10 @@ def dependencies(file):
 setup(
     name='spinners',
     packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
-    version='0.0.17',
+    version='0.0.18',
     license='MIT',
     description='Spinners for terminals',
-    long_description=readme(),
+    long_description='More than 60 spinners for terminal, this is python port of amazing node library cli-spinners. Find the documentation here: https://github.com/ManrajGrover/py-spinners.',
     author='Manraj Singh',
     author_email='manrajsinghgrover@gmail.com',
     url='https://github.com/ManrajGrover/py-spinners',
