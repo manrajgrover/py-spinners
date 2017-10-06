@@ -19,12 +19,6 @@ import os
 import io
 
 from spinners.constants import CLI_SPINNERS_DIR, SPINNER_FILE
-import logging
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s:%(levelname)s:%(message)s"
-)
 
 CURR_DIR = os.path.join(os.path.dirname(__file__), '..')
 
