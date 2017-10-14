@@ -8,7 +8,7 @@ def dependencies(file):
 setup(
     name='spinners',
     packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
-    version='0.0.19',
+    version='0.0.20',
     license='MIT',
     description='Spinners for terminals',
     long_description='More than 60 spinners for terminal, this is python port of amazing node library cli-spinners. Find the documentation here: https://github.com/ManrajGrover/py-spinners.',
