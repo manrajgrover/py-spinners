@@ -9,10 +9,10 @@
     {Question|Discussion|Whatever}: {Short description} -->
 
 
-### Description
+## Description
 <!-- Describe the bug or suggestion in detail -->
 
-#### System settings
+### System settings
 
 - Operating System:
 - Terminal in use:
@@ -20,14 +20,14 @@
 - Halo version:
 - `pip freeze` output:
 
-#### Error
+### Error
 <!-- Put error here. Exceptions, and full traceback if possible. -->
  
-#### Expected behaviour
+### Expected behaviour
 <!-- Put expected behaviour here -->
 
-### Steps to recreate
+## Steps to recreate
 <!-- Describe the steps here -->
 
-### People to notify
+## People to notify
 <!-- Please @mention relevant people here:-->
