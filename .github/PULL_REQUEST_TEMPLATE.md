@@ -4,7 +4,7 @@ Use the following format for your Pull Request title:
 {Issue ID}: {Description of change}
 -->
 
-### Description of new Instant Answer, or changes
+### Description of new feature, or changes
 <!-- What exactly does this PR do? -->
 
 ### Checklist
