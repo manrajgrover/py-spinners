@@ -17,7 +17,7 @@
 - Operating System:
 - Terminal in use:
 - Python version:
-- Halo version:
+- `Spinner` version:
 - `pip freeze` output:
 
 ### Error
