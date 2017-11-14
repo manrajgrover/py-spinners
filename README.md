@@ -2,7 +2,7 @@
   spinners
 </h2>
 
-> More than 60 spinners for terminal, python port of amazing node library cli-spinners
+> 🔄 More than 60 spinners for terminal, python wrapper for amazing node library [cli-spinners](https://github.com/sindresorhus/cli-spinners)
 
 [![Build Status](https://travis-ci.org/ManrajGrover/py-spinners.svg?branch=master)](https://travis-ci.org/ManrajGrover/py-spinners) [![Build status](https://ci.appveyor.com/api/projects/status/8g2ar5pg5810t831?svg=true)](https://ci.appveyor.com/project/ManrajGrover/py-spinners) [![PyPI](https://img.shields.io/pypi/v/spinners.svg)](https://github.com/ManrajGrover/py-spinners) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
