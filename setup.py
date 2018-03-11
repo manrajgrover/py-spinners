@@ -32,7 +32,11 @@ setup(
         'idle',
         'json'
     ],
-    install_requires=dependencies('requirements.txt'),
+    install_requires={
+        ':python_version < "3.4"': [
+            'enum34',
+        ]
+    },
     tests_require=dependencies('requirements-dev.txt'),
     include_package_data=True
 )
