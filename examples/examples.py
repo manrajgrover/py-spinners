@@ -3,8 +3,10 @@
 Attributes
 ----------
 CLEAR_LINE : str
-    To clear the current line
+    Ascii to clear the current line
 """
+from __future__ import print_function
+
 import os
 os.sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -14,8 +16,8 @@ import time
 try:
     import cursor
 except ImportError:
-    import pip
-    pip.main(['install', 'cursor'])
+    import subprocess
+    subprocess.run(['pip', 'install', 'cursor'])
     import cursor
 
 from spinners import Spinners
@@ -37,7 +39,7 @@ def animate(frames, interval, name, iterations=2):
     iterations : int, optional
         Number of loops for animations
     """
-    for i in xrange(iterations):
+    for i in range(iterations):
         for frame in frames:
             output = "\r{0} {1}".format(frame.encode('utf-8'), name)
             sys.stdout.write(output)
@@ -56,6 +58,6 @@ try:
         name = spinner.name
         animate(frames, interval, name)
 
-    print '\n'
+    print('\n')
 finally:
     cursor.show()
