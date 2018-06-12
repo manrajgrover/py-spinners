@@ -12,18 +12,65 @@ os.sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import sys
 import time
+import codecs
 
 try:
     import cursor
 except ImportError:
     import subprocess
-    subprocess.run(['pip', 'install', 'cursor'])
+
+    if sys.version_info.major == 2:
+        subprocess.call(['pip2', 'install', 'cursor'])
+    else:
+        subprocess.call(['pip3', 'install', 'cursor'])
+
     import cursor
 
 from spinners import Spinners
 
 CLEAR_LINE = '\033[K'
 
+def decode_utf_8_text(text):
+    """Decodes the text from utf-8 format.
+    
+    Parameters
+    ----------
+    text : str
+        Text to be decoded
+    
+    Returns
+    -------
+    str
+        Decoded text
+    """
+    try:
+        return codecs.decode(text, 'utf-8')
+    except:
+        return text
+
+
+def encode_utf_8_text(text):
+    """Encodes the text to utf-8 format
+    
+    Parameters
+    ----------
+    text : str
+        Text to be encoded
+    
+    Returns
+    -------
+    str
+        Encoded text
+    """
+    try:
+        return codecs.encode(text, 'utf-8')
+    except:
+        return text
+
+if sys.version_info.major == 2:
+    get_coded_text = encode_utf_8_text
+else:
+    get_coded_text = decode_utf_8_text
 
 def animate(frames, interval, name, iterations=2):
     """Animate given frame for set number of iterations.
@@ -41,7 +88,8 @@ def animate(frames, interval, name, iterations=2):
     """
     for i in range(iterations):
         for frame in frames:
-            output = "\r{0} {1}".format(frame.encode('utf-8'), name)
+            frame = get_coded_text(frame)
+            output = "\r{0} {1}".format(frame, name)
             sys.stdout.write(output)
             sys.stdout.write(CLEAR_LINE)
             sys.stdout.flush()
