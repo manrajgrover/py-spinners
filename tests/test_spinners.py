@@ -2,7 +2,6 @@
 """This module tests Spinners enum."""
 from __future__ import unicode_literals, absolute_import
 
-import re
 import unittest
 
 from enum import Enum
