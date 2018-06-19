@@ -15,7 +15,7 @@ def dependencies(file):
 
 setup(
     name='spinners',
-    packages=find_packages(exclude=('tests', 'examples')) + ['cli-spinners'],
+    packages=find_packages(exclude=('tests', 'examples')),
     version='0.0.21',
     license='MIT',
     description='Spinners for terminals',
