@@ -4,15 +4,8 @@ Python wrapper for beautiful terminal spinner library.
 
 Spinners are from:
 * cli-spinners: MIT © Sindre Sorhus
-
-Attributes
-----------
-CURR_DIR : str
-    Current directory path
-Spinners : Enum
-    Spinners for command line spinners
 """
-from __future__ import unicode_literals, absolute_import
+from __future__ import unicode_literals
 
 from enum import Enum
 
