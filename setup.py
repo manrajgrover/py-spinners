@@ -19,10 +19,10 @@ setup(
     version='0.0.23',
     license='MIT',
     description='Spinners for terminals',
-    long_description='More than 60 spinners for terminal, this is python port of amazing node library cli-spinners. Find the documentation here: https://github.com/ManrajGrover/py-spinners.',
+    long_description='More than 60 spinners for terminal, this is python port of amazing node library cli-spinners. Find the documentation here: https://github.com/manrajgrover/py-spinners.',
     author='Manraj Singh',
     author_email='manrajsinghgrover@gmail.com',
-    url='https://github.com/ManrajGrover/py-spinners',
+    url='https://github.com/manrajgrover/py-spinners',
     keywords=[
         'cli',
         'spinner',
