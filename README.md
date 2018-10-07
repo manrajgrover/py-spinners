@@ -23,7 +23,7 @@ $ pip install spinners
 ```py
 from spinners import Spinners #Enum
 
-print Spinner.line.value
+print Spinners.line.value
 # {u'frames': [u'-', u'\\', u'|', u'/'], u'interval': 130}
 ```
 
