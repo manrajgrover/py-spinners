@@ -1,8 +1,8 @@
 init:
   - ps: echo $env:TOXENV
 
-cache:
-  - '%LOCALAPPDATA%\pip\Cache'
+# cache:
+#   - '%LOCALAPPDATA%\pip\Cache'
 
 clone_depth: 5
 
