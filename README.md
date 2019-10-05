@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/manrajgrover/py-spinners.svg?branch=master)](https://travis-ci.org/manrajgrover/py-spinners) [![Build status](https://ci.appveyor.com/api/projects/status/8g2ar5pg5810t831?svg=true)](https://ci.appveyor.com/project/manrajgrover/py-spinners) [![PyPI](https://img.shields.io/pypi/v/spinners.svg)](https://github.com/manrajgrover/py-spinners) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
-![spinners](https://github.com/manrajgrover/py-spinners/blob/master/assets/spinners.gif)
+![spinners](./assets/spinners.svg)
 
 The list of spinners is just a [JSON file](https://github.com/sindresorhus/cli-spinners/blob/dac4fc6571059bb9e9bc204711e9dfe8f72e5c6f/spinners.json).
 
