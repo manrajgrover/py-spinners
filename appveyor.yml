@@ -49,6 +49,7 @@ matrix:
   fast_finish: true
 
 install:
+  - '%PYTHON_HOME%\Scripts\pip install --upgrade setuptools'
   - '%PYTHON_HOME%\Scripts\pip --version'
   - '%PYTHON_HOME%\Scripts\pip install tox'
   - '%PYTHON_HOME%\Scripts\tox --version'
