@@ -22,7 +22,7 @@
 
 ### Error
 <!-- Put error here. Exceptions, and full traceback if possible. -->
- 
+
 ### Expected behaviour
 <!-- Put expected behaviour here -->
 

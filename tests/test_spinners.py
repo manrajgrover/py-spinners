@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """This module tests Spinners enum."""
-from __future__ import unicode_literals, absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import unittest
-
 from enum import Enum
-from spinners import Spinners
+
+from spinners.spinners import Spinners
 
 
 class TestSpinners(unittest.TestCase):
@@ -13,20 +13,15 @@ class TestSpinners(unittest.TestCase):
 
     def test_symbols(self):
         """Test the symbols in Spinners enum."""
-        self.assertTrue(
-            issubclass(Spinners, Enum)
-        )
+        self.assertTrue(issubclass(Spinners, Enum))
 
         dots = Spinners.dots
 
-        self.assertEquals(
-            dots.value['interval'], 80
-        )
+        self.assertEqual(dots.value["interval"], 80)
 
-        self.assertEquals(
-            type(dots.value['frames']), list
-        )
+        self.assertEqual(type(dots.value["frames"]), list)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     SUITE = unittest.TestLoader().loadTestsFromTestCase(TestSpinners)
     unittest.TextTestRunner(verbosity=2).run(SUITE)

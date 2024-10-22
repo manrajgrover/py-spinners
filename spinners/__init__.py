@@ -1,4 +1,17 @@
-__author__ = 'Manraj Singh'
-__email__ = 'manrajsinghgrover@gmail.com'
+from spinners.errors import *
+from spinners.future import Spinners as FutureSpinners
+from spinners.register import register_spinner
+from spinners.spinners import Spinners as LegacySpinners
 
-from .spinners import Spinners
+Spinners = FutureSpinners.load_spinners()
+
+
+__all__ = [
+    "FutureSpinners",
+    "LegacySpinners",
+    "Spinners",
+    "register_spinner",
+    "ValidationError",
+    "ValidationSpinnerError",
+    "DuplicateSpinnerError",
+]

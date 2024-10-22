@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Use the following format for your Pull Request title:
 
 {Issue ID}: {Description of change}

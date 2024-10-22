@@ -1,44 +1,44 @@
-## Development
+# Development
 
-We need to clone the project and prepare the dev environment:
+We need to clone the project and prepare the virtual environment using poetry
+
+## Setup
 
 ```bash
-$ git clone https://github.com/manrajgrover/py-spinners.git // or using ssh: git@github.com:manrajgrover/py-spinners.git
-$ cd py-spinners
-$ pip install -e .
+git clone https://github.com/d-chris/py-spinners.git -b develop --recurse-submodules
+
+cd py-spinners
+
+poetry --version || pip install poetry --user
+poetry install --with dev
 ```
 
-This will install all requirements to use `py-spinners`. You may want to create a virtual environment specifically for this.
+This will install all requirements to use `py-spinners`.
 
 To install development dependencies, run:
 
 ```bash
-$ pip install -r requirements-dev.txt
+pre-commit --version || pip install pre-commit --user
+pre-commit install
 ```
 
-#### Testing
-Before submitting a pull request, make sure the code passes all the tests and is clean of lint errors:
+## Testing
+
+For devolopment activate your virtual environment and for testing run pytest
 
 ```bash
-$ tox
+poetry shell
+pytest
 ```
 
-To run tests for specific environment, run:
-
-1. For Python 2.7:
+Before submitting a pull request, make sure the code passes all the tests and is clean of lint errors, to test all with all python version in parallel:
 
 ```bash
-$ tox -e py27
-```
-
-2. For Python 3.6:
-
-```bash
-$ tox -e py36
+poetry run tox -p
 ```
 
 For checking lint issues:
 
 ```bash
-$ tox -e lint
+pre-commit run pylint --all-files
 ```
